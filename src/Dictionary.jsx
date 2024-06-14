@@ -41,12 +41,12 @@ const Dictionary = () => {
     
 
   return (
-    <div style={{backgroundColor:'lightblue',height:'100%',overflowX:'hidden'}}>
+    <div style={{height:'max-content',overflowX:'hidden'}}>
 
    <div className='div1'>
     
         <img src={image} alt="" />
-        <h3>DICTIONARY APP</h3>
+        <h3>DICTIONARY WEB.</h3>
 
         <main>
 
@@ -65,9 +65,9 @@ const Dictionary = () => {
    </div>
 
    <div className='div2'>
-    {loading && <p style={{fontSize:'25px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'darkred',textAlign:'center'}}>Searching..........</p>}
+    {loading && <p style={{fontSize:'25px',fontWeight:'bold',color:'darkred',textAlign:'center'}}>Searching..........</p>}
     {words.length === 0 && !loading && (
-      <p style={{fontSize:'20px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'green'}}>Please search for an English word!!!</p>
+      <p style={{fontSize:'20px',fontWeight:'bold',color:'green'}}>Please search for an English word!!!</p>
     )}
 
     {words.length > 0 ? (
@@ -82,38 +82,38 @@ const Dictionary = () => {
               </a>
               </h4>
 
-              <p style={{fontSize:'16px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'green'}}>Phonetic : {terms.phonetic}</p>
+              <p style={{fontSize:'16px',fontWeight:'bold',color:'green'}}>Phonetic : {terms.phonetic}</p>
               {terms.meanings.map((terms) => (
 
                      <>
                      
-                        <p style={{fontSize:'16px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'purple'}}>Part Of Speech : {terms.partOfSpeech}</p>
+                        <p style={{fontSize:'16px',fontWeight:'bold',color:'purple'}}>Part Of Speech : {terms.partOfSpeech}</p>
                         {terms.definitions.map((meaning) =>(
                           <ul>
                             <li style={{color:'blue'}}>
-                              <p style={{fontSize:'16px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'blue'}}>Definition : {meaning.definition}</p>
+                              <p style={{fontSize:'16px',fontWeight:'bold',color:'blue'}}>Definition : {meaning.definition}</p>
                             </li>
                           </ul>
                         ))}
 
-                        {terms.synonyms.length > 0 && <h4 style={{fontSize:'18px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'red'}}>Synonyms</h4>}
+                        {terms.synonyms.length > 0 && <h4 style={{fontSize:'18px',fontWeight:'bold',color:'red'}}>Synonyms</h4>}
                         {terms.synonyms.length > 0 &&
                         terms.synonyms.map((synonyms) => (
                           <>
                           <ul>
                             <li style={{color:'red'}}>
-                              <p style={{fontSize:'18px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'red'}}>{synonyms}</p>
+                              <p style={{fontSize:'18px',fontWeight:'bold',color:'red'}}>{synonyms}</p>
                             </li>
                           </ul>
                           </>
                         ))}
 
-                        {terms.antonyms.length > 0 && <h4 style={{fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'green',fontSize:'20px'}}>Antonyms</h4>}
+                        {terms.antonyms.length > 0 && <h4 style={{fontWeight:'bold',color:'green',fontSize:'20px'}}>Antonyms</h4>}
                         {terms.antonyms.map((antonyms) =>(
                           <>
                             <ul>
                               <li style={{color:'green'}}>
-                                <p style={{fontSize:'18px',fontFamily:'Georgia, Times New Roman',fontWeight:'bold',color:'green'}}>{antonyms}</p>
+                                <p style={{fontSize:'18px',fontWeight:'bold',color:'green'}}>{antonyms}</p>
                               </li>
                             </ul>
                           </>
