@@ -57,7 +57,8 @@ const Dictionary = () => {
              onInput={handleChange}
               placeholder='Search words'/>
 
-            <button type='submit'>Check word</button>
+            <button type='submit'>Search.</button>
+            
            </form>
 
         </main>
