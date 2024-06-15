@@ -41,7 +41,7 @@ const Dictionary = () => {
     
 
   return (
-    <div style={{height:'max-content',overflowX:'hidden'}}>
+    <div style={{height:'max-content',overflowX:'hidden',backgroundColor:'whitesmoke'}}>
 
    <div className='div1'>
     
