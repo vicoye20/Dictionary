@@ -41,6 +41,7 @@ const Dictionary = () => {
         height: "max-content",
         overflowX: "hidden",
         backgroundColor: "lightblue",
+        position:"fixed"
       }}
     >
       <div className="div1">
